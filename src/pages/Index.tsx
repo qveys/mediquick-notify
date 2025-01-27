@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MedicationCard from "@/components/MedicationCard";
 import BottomNav from "@/components/BottomNav";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -8,6 +8,7 @@ import { fr } from "date-fns/locale";
 
 const Index = () => {
   const { toast } = useToast();
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const medications = [
     {
@@ -51,6 +52,14 @@ const Index = () => {
     return days;
   };
 
+  const handleDateClick = (date: Date) => {
+    setSelectedDate(date);
+    toast({
+      title: "Date sélectionnée",
+      description: `Vous avez sélectionné le ${format(date, 'dd MMMM yyyy', { locale: fr })}`,
+    });
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <header className="fixed top-0 left-0 right-0 z-50">
@@ -70,8 +79,9 @@ const Index = () => {
             {getDays().map((date, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center ${
-                  format(date, "d") === format(new Date(), "d")
+                onClick={() => handleDateClick(date)}
+                className={`flex flex-col items-center cursor-pointer transition-colors hover:text-primary ${
+                  format(date, "d") === format(selectedDate, "d")
                     ? "text-primary"
                     : ""
                 }`}
