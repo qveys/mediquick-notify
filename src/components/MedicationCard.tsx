@@ -28,16 +28,15 @@ const MedicationCard = ({
           </div>
           <div className="flex-1">
             <h3 className="text-lg font-semibold">{name}</h3>
-            <div className="flex items-center text-sm text-muted-foreground">
-              <Clock className="w-4 h-4 mr-1" />
-              {time}
-            </div>
+            <p className="text-sm text-muted-foreground">
+              {dosage}
+            </p>
+          </div>
+          <div className="flex items-center text-sm text-muted-foreground">
+            <Clock className="w-4 h-4 mr-1" />
+            {time}
           </div>
         </div>
-        
-        <p className="text-sm text-muted-foreground">
-          {dosage}
-        </p>
         
         <div className="flex space-x-2">
           <Button
