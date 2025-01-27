@@ -20,7 +20,7 @@ const MedicationCard = ({
   onSkip,
 }: MedicationCardProps) => {
   return (
-    <div className="w-full max-w-md mx-auto mt-10">
+    <div className="w-full max-w-md mx-auto mt-6">
       <div className="relative">
         <div className="absolute left-6 z-10" style={{top: "calc(calc(1.75rem + 8px)/-2)"}}>
           <div className="flex items-center text-xl font-semibold bg-background px-2 py-1 rounded">
