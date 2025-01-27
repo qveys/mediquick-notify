@@ -20,7 +20,7 @@ const MedicationCard = ({
   onSkip,
 }: MedicationCardProps) => {
   return (
-    <div className="w-full max-w-md mx-auto mt-6">
+    <div className="w-full mt-6">
       <div className="relative">
         <div className="absolute left-6 z-10" style={{top: "calc(calc(1.75rem + 8px)/-2)"}}>
           <div className="flex items-center text-xl font-semibold bg-background px-2 py-1 rounded">
@@ -29,9 +29,9 @@ const MedicationCard = ({
           </div>
         </div>
         <Card className="w-full overflow-hidden animate-fade-in glass">
-          <div className="p-8 space-y-6">
+          <div className="p-4 space-y-4">
             <div className="flex items-center space-x-6">
-              <div className="p-4 rounded-full bg-primary/5">
+              <div className="p-4 rounded-full bg-primary/5 mx-2">
                 <Pill className="w-8 h-8 text-primary" />
               </div>
               <div className="flex-1">
