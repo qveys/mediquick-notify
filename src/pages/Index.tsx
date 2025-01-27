@@ -1,6 +1,7 @@
 import React from "react";
 import MedicationCard from "@/components/MedicationCard";
 import BottomNav from "@/components/BottomNav";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -11,38 +12,39 @@ const Index = () => {
       id: 1,
       name: "Tenofovir",
       time: "23:00",
-      dosage: "Take 1 pill",
+      dosage: "Prendre 1 comprimé",
     },
     {
       id: 2,
-      name: "Vitamin D",
+      name: "Vitamine D",
       time: "08:00",
-      dosage: "Take 1 pill with food",
+      dosage: "Prendre 1 comprimé avec de la nourriture",
     },
   ];
 
   const handleTake = (name: string) => {
     toast({
-      title: "Medication taken",
-      description: `${name} has been marked as taken.`,
+      title: "Médicament pris",
+      description: `${name} a été marqué comme pris.`,
     });
   };
 
   const handleSkip = (name: string) => {
     toast({
-      title: "Medication skipped",
-      description: `${name} has been skipped.`,
+      title: "Médicament ignoré",
+      description: `${name} a été ignoré.`,
       variant: "destructive",
     });
   };
 
   return (
-    <div className="min-h-screen pb-24">
+    <div className="min-h-screen pb-24 bg-background">
+      <ThemeToggle />
       <header className="p-6 glass mb-6">
         <div className="max-w-md mx-auto">
-          <h1 className="text-2xl font-bold mb-2">Today's Schedule</h1>
+          <h1 className="text-2xl font-bold mb-2">Programme du jour</h1>
           <p className="text-muted-foreground">
-            You have {medications.length} medications scheduled
+            Vous avez {medications.length} médicaments programmés
           </p>
         </div>
       </header>
