@@ -20,9 +20,9 @@ const MedicationCard = ({
   onSkip,
 }: MedicationCardProps) => {
   return (
-    <Card className="w-full max-w-md mx-auto overflow-hidden animate-fade-in glass relative mt-4">
-      <div className="absolute -top-3 left-6">
-        <div className="flex items-center text-xl font-semibold bg-background px-2 rounded">
+    <Card className="w-full max-w-md mx-auto overflow-hidden animate-fade-in glass relative mt-6">
+      <div className="absolute -top-4 left-6">
+        <div className="flex items-center text-xl font-semibold bg-background px-2 py-1 rounded">
           <Clock className="w-5 h-5 mr-2 text-primary" />
           {time}
         </div>
