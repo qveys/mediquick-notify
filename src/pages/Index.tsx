@@ -96,7 +96,7 @@ const Index = () => {
         </div>
       </div>
 
-      <main className="flex-1 overflow-y-auto px-6 space-y-4 max-w-md mx-auto mt-[200px] mb-24">
+      <main className="flex-1 overflow-y-auto px-6 space-y-10 max-w-md mx-auto mt-[200px] mb-24">
         {medications.map((med) => (
           <MedicationCard
             key={med.id}
