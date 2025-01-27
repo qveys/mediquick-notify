@@ -20,8 +20,8 @@
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+    --border: 240 5.9% 80%;
+    --input: 240 5.9% 80%;
     --ring: 196 100% 50%;
     --radius: 1rem;
   }
@@ -43,8 +43,8 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --border: 240 3.7% 25%;
+    --input: 240 3.7% 25%;
     --ring: 196 100% 50%;
   }
 }
@@ -60,7 +60,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 dark:bg-black/10 dark:border-white/10;
+    @apply bg-white/10 backdrop-blur-lg border border-white/30 dark:bg-black/10 dark:border-white/20;
   }
   
   .card-gradient {
