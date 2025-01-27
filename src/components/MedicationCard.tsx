@@ -21,7 +21,7 @@ const MedicationCard = ({
 }: MedicationCardProps) => {
   return (
     <Card className="w-full max-w-md mx-auto overflow-hidden animate-fade-in glass relative">
-      <div className="absolute top-4 right-6">
+      <div className="absolute top-4 left-6">
         <div className="flex items-center text-xl font-semibold">
           <Clock className="w-5 h-5 mr-2 text-primary" />
           {time}
