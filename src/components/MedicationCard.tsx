@@ -20,9 +20,9 @@ const MedicationCard = ({
   onSkip,
 }: MedicationCardProps) => {
   return (
-    <div className="w-full max-w-md mx-auto mt-6">
+    <div className="w-full mx-auto mt-6">
       <div className="relative">
-        <div className="absolute -top-4 left-6 z-10">
+        <div className="absolute left-6 z-10" style={{ top: "calc(- 1.25rem / 2)" }}>
           <div className="flex items-center text-xl font-semibold bg-background px-2 py-1 rounded">
             <Clock className="w-5 h-5 mr-2 text-primary" />
             {time}
