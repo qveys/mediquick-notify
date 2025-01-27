@@ -13,8 +13,8 @@ const BottomNav = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 animate-slide-in">
-      <div className="glass mx-4 mb-4 rounded-2xl">
+    <nav className="fixed bottom-0 left-0 right-0 z-50">
+      <div className="glass">
         <div className="flex justify-around p-4">
           {items.map(({ id, icon: Icon, label }) => (
             <button
