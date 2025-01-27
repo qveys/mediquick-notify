@@ -29,33 +29,33 @@ const MedicationCard = ({
           </div>
         </div>
         <Card className="w-full overflow-hidden animate-fade-in glass">
-          <div className="p-6 space-y-4">
-            <div className="flex items-center space-x-4">
-              <div className="p-2 rounded-full bg-primary/10">
-                <Pill className="w-6 h-6 text-primary" />
+          <div className="p-8 space-y-6">
+            <div className="flex items-center space-x-6">
+              <div className="p-4 rounded-full bg-primary/5">
+                <Pill className="w-8 h-8 text-primary" />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold">{name}</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-1">{name}</h3>
+                <p className="text-sm text-muted-foreground/80">
                   {dosage}
                 </p>
               </div>
             </div>
             
-            <div className="flex space-x-2">
+            <div className="flex space-x-4">
               <Button
                 onClick={onTake}
-                className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="flex-1 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                <Check className="w-4 h-4 mr-2" />
+                <Check className="w-5 h-5 mr-2" />
                 Take
               </Button>
               <Button
                 onClick={onSkip}
                 variant="outline"
-                className="flex-1"
+                className="flex-1 py-6"
               >
-                <X className="w-4 h-4 mr-2" />
+                <X className="w-5 h-5 mr-2" />
                 Skip
               </Button>
             </div>
